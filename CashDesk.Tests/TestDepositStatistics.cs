@@ -12,13 +12,13 @@ namespace CashDesk.Tests
         {
             using (var dal = new DataAccess())
             {
-                await dal.InitializeDatabaseAsync();
-                var memberNumber = await dal.AddMemberAsync("Foo", "DepositStatistics", DateTime.Today.AddYears(-18));
-                await dal.JoinMemberAsync(memberNumber);
-                await dal.DepositAsync(memberNumber, 100M);
-                await dal.DepositAsync(memberNumber, 100M);
+                dal.InitializeDatabaseAsync();
+                var memberNumber = dal.AddMemberAsync("Foo", "DepositStatistics", DateTime.Today.AddYears(-18));
+                dal.JoinMemberAsync(memberNumber);
+                dal.DepositAsync(memberNumber, 100M);
+                dal.DepositAsync(memberNumber, 100M);
 
-                var statistics = await dal.GetDepositStatisticsAsync();
+                var statistics = dal.GetDepositStatisticsAsync();
                 Assert.True(statistics.Count() > 0);
                 Assert.True(statistics.Any(s => s.Member.MemberNumber == memberNumber));
                 Assert.Equal(statistics.Where(s => s.Member.MemberNumber == memberNumber).Sum(s => s.TotalAmount), 200M);

@@ -165,7 +165,7 @@ namespace CashDesk
         /// <exception cref="InvalidOperationException">
         /// <see cref="InitializeDatabaseAsync"/> has already been called
         /// </exception>
-        Task InitializeDatabaseAsync();
+        void InitializeDatabaseAsync();
 
         /// <summary>
         /// Adds a new member
@@ -184,7 +184,7 @@ namespace CashDesk
         /// <exception cref="DuplicateNameException">
         /// Member with the same last name already exists.
         /// </exception>
-        Task<int> AddMemberAsync(string firstName, string lastName, DateTime birthday);
+        int AddMemberAsync(string firstName, string lastName, DateTime birthday);
 
         /// <summary>
         /// Delets a member
@@ -200,7 +200,7 @@ namespace CashDesk
         /// This method deletes all data that is stored for this member (including
         /// memberships and deposits).
         /// </remarks>
-        Task DeleteMemberAsync(int memberNumber);
+        void DeleteMemberAsync(int memberNumber);
 
         /// <summary>
         /// Adds a membership record for the specified member
@@ -220,7 +220,7 @@ namespace CashDesk
         /// <remarks>
         /// The new membership starts at the time of calling this method.
         /// </remarks>
-        Task<IMembership> JoinMemberAsync(int memberNumber);
+        IMembership JoinMemberAsync(int memberNumber);
 
         /// <summary>
         /// Ends the membership for the specified member
@@ -240,7 +240,7 @@ namespace CashDesk
         /// <remarks>
         /// The membership ends at the time of calling this method.
         /// </remarks>
-        Task<IMembership> CancelMembershipAsync(int memberNumber);
+        IMembership CancelMembershipAsync(int memberNumber);
 
         /// <summary>
         /// Deposit the specified amount for the specified member
@@ -254,7 +254,7 @@ namespace CashDesk
         /// <exception cref="NoMemberException">
         /// The member is currently not an active member.
         /// </exception>
-        Task DepositAsync(int memberNumber, decimal amount);
+        void DepositAsync(int memberNumber, decimal amount);
 
         /// <summary>
         /// Gets statistics about deposits per member.
@@ -262,6 +262,6 @@ namespace CashDesk
         /// <exception cref="InvalidOperationException">
         /// <see cref="InitializeDatabaseAsync"/> has not been called before
         /// </exception>
-        Task<IEnumerable<IDepositStatistics>> GetDepositStatisticsAsync();
+        IEnumerable<IDepositStatistics> GetDepositStatisticsAsync();
     }
 }

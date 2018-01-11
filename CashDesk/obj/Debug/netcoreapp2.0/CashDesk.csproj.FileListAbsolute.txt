@@ -1,0 +1,9 @@
+D:\Schule\5AHIF\POSE-C#\Cash-Desk-Quiz\CashDesk\bin\Debug\netcoreapp2.0\CashDesk.deps.json
+D:\Schule\5AHIF\POSE-C#\Cash-Desk-Quiz\CashDesk\bin\Debug\netcoreapp2.0\CashDesk.dll
+D:\Schule\5AHIF\POSE-C#\Cash-Desk-Quiz\CashDesk\obj\Debug\netcoreapp2.0\CashDesk.csprojResolveAssemblyReference.cache
+D:\Schule\5AHIF\POSE-C#\Cash-Desk-Quiz\CashDesk\obj\Debug\netcoreapp2.0\CashDesk.csproj.CoreCompileInputs.cache
+D:\Schule\5AHIF\POSE-C#\Cash-Desk-Quiz\CashDesk\obj\Debug\netcoreapp2.0\CashDesk.AssemblyInfoInputs.cache
+D:\Schule\5AHIF\POSE-C#\Cash-Desk-Quiz\CashDesk\obj\Debug\netcoreapp2.0\CashDesk.AssemblyInfo.cs
+D:\Schule\5AHIF\POSE-C#\Cash-Desk-Quiz\CashDesk\bin\Debug\netcoreapp2.0\CashDesk.pdb
+D:\Schule\5AHIF\POSE-C#\Cash-Desk-Quiz\CashDesk\obj\Debug\netcoreapp2.0\CashDesk.dll
+D:\Schule\5AHIF\POSE-C#\Cash-Desk-Quiz\CashDesk\obj\Debug\netcoreapp2.0\CashDesk.pdb
